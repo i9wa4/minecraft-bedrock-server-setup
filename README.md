@@ -1,5 +1,7 @@
 # minecraft-bedrock-server-setup
 
+This is a DRAFT!
+
 ## 1. create `.env` for compose.yml
 
 ```plaintext
