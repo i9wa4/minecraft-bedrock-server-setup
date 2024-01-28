@@ -27,7 +27,3 @@ docker compose up -d --wait
 docker compose down
 docker compose up -d --wait
 ```
-
-## 4. SSH Connection
-
-[Linux サーバー：SSH 設定（2021年2月更新）](https://zenn.dev/wsuzume/articles/26b26106c3925e)
