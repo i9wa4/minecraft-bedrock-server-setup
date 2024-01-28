@@ -1,0 +1,16 @@
+services:
+  mbs:
+    image: itzg/minecraft-bedrock-server:latest
+    user: $UID:$GID
+    tty: true
+    stdin_open: true
+    restart: always
+    container_name: minecraft-bedrock-server
+    ports:
+      - $PORT:$PORT/udp
+    environment:
+      EULA: "TRUE"
+      SERVER_NAME: minecraft-bedrock-server
+      LEVEL_NAME: 25nishi
+    volumes:
+      - "/docker/mbs:/data"

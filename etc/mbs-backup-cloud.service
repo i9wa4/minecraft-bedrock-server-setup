@@ -1,0 +1,12 @@
+[Unit]
+Description=Minecraft Bedrock Server Backup to Cloud
+
+[Service]
+User=i9wa4
+Group=i9wa4
+Type=oneshot
+WorkingDirectory=/home/i9wa4/Minecraft/mbs-core/bin
+ExecStart=/home/i9wa4/Minecraft/mbs-core/bin/rsync-googledrive.sh
+
+[Install]
+WantedBy=timers.target
