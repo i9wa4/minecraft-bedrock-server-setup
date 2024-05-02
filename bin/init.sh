@@ -2,7 +2,7 @@
 set -euox pipefail -o posix
 export LC_ALL=C
 
-cd $(dirname "$0")
+cd "$(dirname "$0")"
 
 source ../.env
 
@@ -33,7 +33,7 @@ sudo chown root:root /etc/systemd/system/mbs-backup-cloud.timer
 sudo chown root:root /etc/systemd/system/mbs-update.service
 sudo chown root:root /etc/systemd/system/mbs-update.timer
 
-sudo chmod 755 -R "${DIR_REPO}"/bin
+# sudo chmod 755 -R "${DIR_REPO}"/bin
 
 sudo systemctl daemon-reload
 sudo systemctl enable mbs-backup.timer

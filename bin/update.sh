@@ -2,12 +2,11 @@
 set -euox pipefail -o posix
 export LC_ALL=C
 
-script_dir=$(cd "$(dirname "$0")"; pwd)
-cd "${script_dir}"
+cd "$(dirname "$0")"
 
 source ../.env
 
 echo "update the server"
-cd "${HOME}"/Minecraft/mbs-core/
+cd "${DIR_REPO}"
 docker compose down
 docker compose up -d --wait
