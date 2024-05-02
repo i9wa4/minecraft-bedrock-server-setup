@@ -41,6 +41,12 @@ This is a DRAFT!
     docker compose up -d --wait
     ```
 
+1. Configure systemd.
+
+    ```sh
+    sudo bash init-systemd.sh
+    ```
+
 ## 2. Update the server manually
 
 ```sh
