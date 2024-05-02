@@ -3,7 +3,9 @@
 ## 1. How to setup the server
 
 1. Clone this repository.
-    - `sudo git clone https://github.com/i9wa4/minecraft-bedrock-server-setup /docker/minecraft-bedrock-server-setup`
+    ```sh
+    sudo git clone https://github.com/i9wa4/minecraft-bedrock-server-setup /docker/minecraft-bedrock-server-setup
+    ```
 1. Fix `User` and `Group` in `etc/*.service`.
 1. Create `.env` in the root of this repository.
 
