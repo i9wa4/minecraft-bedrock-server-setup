@@ -1,6 +1,6 @@
 # minecraft-bedrock-server-setup
 
-## 1. How to setup the server
+## 1. Set up the server
 
 1. Clone this repository.
     ```sh
