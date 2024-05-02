@@ -41,10 +41,16 @@
     docker compose up -d --wait
     ```
 
+1. Grant execution permission to scripts.
+
+    ```sh
+    sudo bash bin/chmod.sh
+    ```
+
 1. Configure systemd.
 
     ```sh
-    sudo bash init-systemd.sh
+    sudo bash bin/init-systemd.sh
     ```
 
 ## 2. Update the server manually
