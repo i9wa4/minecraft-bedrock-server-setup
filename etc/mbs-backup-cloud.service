@@ -2,11 +2,12 @@
 Description=Minecraft Bedrock Server Backup to Cloud
 
 [Service]
-User=i9wa4
-Group=i9wa4
+EnvironmentFile=/docker/minecraft-bedrock-server-setup/.env
+User=${USERNAME}
+Group=${USERNAME}
 Type=oneshot
-WorkingDirectory=/home/i9wa4/Minecraft/mbs-core/bin
-ExecStart=/home/i9wa4/Minecraft/mbs-core/bin/rsync-googledrive.sh
+WorkingDirectory=${DIR_REPO}/bin
+ExecStart=${DIR_REPO}/bin/rsync-googledrive.sh
 
 [Install]
 WantedBy=timers.target

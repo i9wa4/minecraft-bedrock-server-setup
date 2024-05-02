@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -euox pipefail -o posix
 export LC_ALL=C
+
+cd $(dirname "$0")
 
 source ../.env
 
 # https://qiita.com/siida36/items/be21d361cf80d664859c
 sudo ufw default DENY
 sudo ufw enable
-sudo ufw allow "${PORT}"
+sudo ufw allow "${PORT_SERVER}"
 sudo ufw allow "${PORT_SSH}"
 sudo ufw reload
 
@@ -17,20 +19,26 @@ sudo apt update
 sudo apt install -y google-drive-ocamlfuse
 
 # https://zenn.dev/hi_ka_ru/articles/d01bf1a91bade0
-sudo ln -fs "${HOME}"/Minecraft/mbs-core/etc/mbs-backup.service /etc/systemd/system/mbs-backup.service
-sudo ln -fs "${HOME}"/Minecraft/mbs-core/etc/mbs-backup.timer /etc/systemd/system/mbs-backup.timer
+sudo ln -fs "${DIR_REPO}"/etc/mbs-backup.service        /etc/systemd/system/mbs-backup.service
+sudo ln -fs "${DIR_REPO}"/etc/mbs-backup.timer          /etc/systemd/system/mbs-backup.timer
+sudo ln -fs "${DIR_REPO}"/etc/mbs-backup-cloud.service  /etc/systemd/system/mbs-backup-cloud.service
+sudo ln -fs "${DIR_REPO}"/etc/mbs-backup-cloud.timer    /etc/systemd/system/mbs-backup-cloud.timer
+sudo ln -fs "${DIR_REPO}"/etc/mbs-update.service        /etc/systemd/system/mbs-update.service
+sudo ln -fs "${DIR_REPO}"/etc/mbs-update.timer          /etc/systemd/system/mbs-update.timer
+
 sudo chown root:root /etc/systemd/system/mbs-backup.service
 sudo chown root:root /etc/systemd/system/mbs-backup.timer
-sudo chmod 755 "${HOME}"/Minecraft/mbs-core/bin/backup.sh
-sudo systemctl daemon-reload
-sudo systemctl enable mbs-backup.timer
-sudo systemctl start mbs-backup.timer
-
-sudo ln -fs "${HOME}"/Minecraft/mbs-core/etc/mbs-backup-cloud.service /etc/systemd/system/mbs-backup-cloud.service
-sudo ln -fs "${HOME}"/Minecraft/mbs-core/etc/mbs-backup-cloud.timer /etc/systemd/system/mbs-backup-cloud.timer
 sudo chown root:root /etc/systemd/system/mbs-backup-cloud.service
 sudo chown root:root /etc/systemd/system/mbs-backup-cloud.timer
-sudo chmod 755 "${HOME}"/Minecraft/mbs-core/bin/rsync-googledrive.sh
+sudo chown root:root /etc/systemd/system/mbs-update.service
+sudo chown root:root /etc/systemd/system/mbs-update.timer
+
+sudo chmod 755 -R "${DIR_REPO}"/bin
+
 sudo systemctl daemon-reload
+sudo systemctl enable mbs-backup.timer
+sudo systemctl start  mbs-backup.timer
 sudo systemctl enable mbs-backup-cloud.timer
-sudo systemctl start mbs-backup-cloud.timer
+sudo systemctl start  mbs-backup-cloud.timer
+sudo systemctl enable mbs-update.timer
+sudo systemctl start  mbs-update.timer

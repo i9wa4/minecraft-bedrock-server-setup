@@ -1,5 +1,5 @@
 [Unit]
-Description=Minecraft Bedrock Server Backup
+Description=Minecraft Bedrock Server Update
 
 [Service]
 EnvironmentFile=/docker/minecraft-bedrock-server-setup/.env
@@ -7,7 +7,7 @@ User=${USERNAME}
 Group=${USERNAME}
 Type=oneshot
 WorkingDirectory=${DIR_REPO}/bin
-ExecStart=${DIR_REPO}/bin/backup.sh
+ExecStart=${DIR_REPO}/bin/update.sh
 
 [Install]
 WantedBy=timers.target

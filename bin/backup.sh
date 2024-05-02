@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -euox pipefail -o posix
 export LC_ALL=C
+
+script_dir=$(cd "$(dirname "$0")"; pwd)
+cd "${script_dir}"
+
+source ../.env
 
 TIMESTAMP=$(date '+%Y%m%dT%H%M%S')
 echo TIMESTAMP="${TIMESTAMP}"
@@ -8,7 +13,7 @@ echo TIMESTAMP="${TIMESTAMP}"
 echo "stop the server"
 cd "${HOME}"/Minecraft/mbs-core/
 docker compose stop
-sleep 300s
+docker compose wait
 
 echo "back up the world"
 cp -f /docker/mbs/allowlist.json         "${HOME}"/Minecraft/mbs-core/core/allowlist.json
@@ -16,7 +21,7 @@ cp -f /docker/mbs/permissions.json       "${HOME}"/Minecraft/mbs-core/core/permi
 cp -f /docker/mbs/server.properties      "${HOME}"/Minecraft/mbs-core/core/server.properties
 cp -f /docker/mbs/valid_known_packs.json "${HOME}"/Minecraft/mbs-core/core/valid_known_packs.json
 zip -r "${HOME}"/Minecraft/mbs-backup/mbs-core-"${TIMESTAMP}".zip "${HOME}"/Minecraft/mbs-core/
-zip -r "${HOME}"/Minecraft/mbs-backup/mbs-25nishi-"${TIMESTAMP}".zip /docker/mbs/worlds/25nishi/
+zip -r "${HOME}"/Minecraft/mbs-backup/mbs-25nishi-"${TIMESTAMP}".zip /docker/mbs/worlds/"${WORLD_NAME}"
 
 echo "start the server"
 cd "${HOME}"/Minecraft/mbs-core/

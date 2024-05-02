@@ -7,7 +7,7 @@ services:
     restart: always
     container_name: minecraft-bedrock-server
     ports:
-      - $PORT:$PORT/udp
+      - $PORT_SERVER:$PORT_SERVER/udp
     environment:
       EULA: "TRUE"
       SERVER_NAME: minecraft-bedrock-server

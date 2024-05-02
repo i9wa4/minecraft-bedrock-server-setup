@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -euox pipefail -o posix
 export LC_ALL=C
+
+script_dir=$(cd "$(dirname "$0")"; pwd)
+cd "${script_dir}"
+
+source ../.env
 
 sudo chown -R root:root "${HOME}"/Minecraft/mbs-core/core/
 sudo cp -f "${HOME}"/Minecraft/mbs-core/core/allowlist.json         /docker/mbs/allowlist.json
