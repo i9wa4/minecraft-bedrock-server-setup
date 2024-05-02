@@ -47,3 +47,14 @@ This is a DRAFT!
 ```sh
 ./bin/update.sh
 ```
+
+## View logs
+
+```sh
+docker compose logs
+```
+
+```sh
+docker compose up
+# detach: CTRL-4
+```
