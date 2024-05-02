@@ -14,7 +14,7 @@ cd "${DIR_REPO}"
 docker compose stop
 
 echo "back up the world"
-zip -r "${DIR_BACKUP}"/mbs-core-"${TIMESTAMP}".zip \
+zip "${DIR_BACKUP}"/mbs-core-"${TIMESTAMP}".zip \
   /docker/mbs/allowlist.json \
   /docker/mbs/permissions.json \
   /docker/mbs/server.properties \
