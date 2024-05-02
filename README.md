@@ -9,7 +9,6 @@
     ```sh
     MY_UID=1000
     MY_GID=1000
-    MY_USERNAME=i9wa4
     PORT_SERVER=
     PORT_SSH=
     WORLD_NAME=25nishi
