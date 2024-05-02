@@ -19,7 +19,8 @@ zip -r "${DIR_BACKUP}"/mbs-core-"${TIMESTAMP}".zip \
   /docker/mbs/allowlist.json \
   /docker/mbs/permissions.json \
   /docker/mbs/server.properties \
-  /docker/mbs/valid_known_packs.json
+  /docker/mbs/valid_known_packs.json \
+  "${DIR_REPO}"/.env
 zip -r "${DIR_BACKUP}"/mbs-"${WORLD_NAME}"-"${TIMESTAMP}".zip /docker/mbs/worlds/"${WORLD_NAME}"
 
 echo "start the server"
