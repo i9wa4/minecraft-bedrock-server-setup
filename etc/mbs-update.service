@@ -6,8 +6,8 @@ EnvironmentFile=/docker/minecraft-bedrock-server-setup/.env
 User=${MY_USERNAME}
 Group=${MY_USERNAME}
 Type=oneshot
-WorkingDirectory=${DIR_REPO}/bin
-ExecStart=${DIR_REPO}/bin/update.sh
+WorkingDirectory=/docker/minecraft-bedrock-server-setup/bin
+ExecStart=/docker/minecraft-bedrock-server-setup/bin/update.sh
 
 [Install]
 WantedBy=timers.target
