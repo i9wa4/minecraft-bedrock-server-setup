@@ -12,7 +12,6 @@ echo TIMESTAMP="${TIMESTAMP}"
 echo "stop the server"
 cd "${DIR_REPO}"
 docker compose stop
-sleep 300
 
 echo "back up the world"
 zip -r "${DIR_BACKUP}"/mbs-core-"${TIMESTAMP}".zip \
