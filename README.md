@@ -1,7 +1,5 @@
 # minecraft-bedrock-server-setup
 
-This is a DRAFT!
-
 ## 1. How to setup the server
 
 1. Clone this repository.

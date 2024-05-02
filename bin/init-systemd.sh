@@ -24,7 +24,6 @@ sudo chown root:root /etc/systemd/system/mbs-update.timer
 sudo chmod 755 -R "${DIR_REPO}"/bin
 
 sudo systemctl daemon-reload
-sudo systemctl enable mbs-backup.service
 sudo systemctl enable mbs-backup.timer
 sudo systemctl start  mbs-backup.timer
 sudo systemctl enable mbs-backup-cloud.timer
