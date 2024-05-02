@@ -1,7 +1,7 @@
 services:
   mbs:
     image: itzg/minecraft-bedrock-server:latest
-    user: $UID:$GID
+    user: $MY_UID:$MY_GID
     tty: true
     stdin_open: true
     restart: always
@@ -11,6 +11,6 @@ services:
     environment:
       EULA: "TRUE"
       SERVER_NAME: minecraft-bedrock-server
-      LEVEL_NAME: 25nishi
+      LEVEL_NAME: $WORLD_NAME
     volumes:
       - "/docker/mbs:/data"

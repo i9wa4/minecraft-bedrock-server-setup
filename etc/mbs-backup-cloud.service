@@ -3,8 +3,8 @@ Description=Minecraft Bedrock Server Backup to Cloud
 
 [Service]
 EnvironmentFile=/docker/minecraft-bedrock-server-setup/.env
-User=${USERNAME}
-Group=${USERNAME}
+User=${MY_USERNAME}
+Group=${MY_USERNAME}
 Type=oneshot
 WorkingDirectory=${DIR_REPO}/bin
 ExecStart=${DIR_REPO}/bin/rsync-googledrive.sh

@@ -9,9 +9,9 @@ This is a DRAFT!
 1. Create `.env` in the root of this repository.
 
     ```sh
-    UID=1000
-    GID=1000
-    USERNAME=i9wa4
+    MY_UID=1000
+    MY_GID=1000
+    MY_USERNAME=i9wa4
     PORT_SERVER=
     PORT_SSH=
     WORLD_NAME=25nishi
@@ -23,8 +23,7 @@ This is a DRAFT!
 1. Initialize the server.
 
     ```sh
-    cd /docker/minecraft-bedrock-server-setup
-    ./bin/init.sh
+    sudo bash bin/init.sh
     docker compose up -d --wait
     docker compose stop
     ```
@@ -45,10 +44,10 @@ This is a DRAFT!
 ## 2. Update the server manually
 
 ```sh
-./bin/update.sh
+sudo bin/update.sh
 ```
 
-## View logs
+## 3. View logs
 
 ```sh
 docker compose logs
