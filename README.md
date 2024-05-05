@@ -1,5 +1,7 @@
 # minecraft-bedrock-server-setup
 
+This Minecraft server automatically creates backups of the world to Google Drive and updates itself.
+
 ## 1. Set up the server
 
 1. Clone this repository.
