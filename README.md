@@ -29,11 +29,11 @@
     ```
 
 1. Overwrite the followings if needed. You may need `sudo chown root:root`.
-    - /docker/mbs/allowlist.json
-    - /docker/mbs/permissions.json
-    - /docker/mbs/server.properties
-    - /docker/mbs/valid_known_packs.json
-    - /docker/mbs/worlds/
+    - `/docker/mbs/allowlist.json`
+    - `/docker/mbs/permissions.json`
+    - `/docker/mbs/server.properties`
+    - `/docker/mbs/valid_known_packs.json`
+    - `/docker/mbs/worlds/`
 
 1. Start the server.
 
