@@ -2,7 +2,11 @@
 
 This Minecraft server automatically creates backups of the world to Google Drive and updates itself.
 
-## 1. Set up the server
+## 1. Requirements
+
+- AWS CLI
+
+## 2. Set up the server
 
 1. Clone this repository.
     ```sh
@@ -16,10 +20,9 @@ This Minecraft server automatically creates backups of the world to Google Drive
     MY_GID=1000
     PORT_SERVER=
     PORT_SSH=
-    WORLD_NAME=25nishi
-    DIR_REPO=/docker/minecraft-bedrock-server-setup
-    DIR_GOOGLE_DRIVE=/home/i9wa4/GoogleDrive
-    DIR_BACKUP=/home/i9wa4/Minecraft/mbs-backup
+    WORLD_NAME=
+    DIR_REPO=
+    DIR_BACKUP=
     ```
 
 1. Initialize the server.
@@ -55,13 +58,13 @@ This Minecraft server automatically creates backups of the world to Google Drive
     sudo bash bin/init-systemd.sh
     ```
 
-## 2. Update the server manually
+## 3. Update the server manually
 
 ```sh
 sudo bin/update.sh
 ```
 
-## 3. View logs
+## 4. View logs
 
 ```sh
 docker compose logs

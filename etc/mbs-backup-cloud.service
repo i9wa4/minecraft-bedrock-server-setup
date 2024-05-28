@@ -6,7 +6,7 @@ User=i9wa4
 Group=i9wa4
 Type=oneshot
 WorkingDirectory=/docker/minecraft-bedrock-server-setup/bin
-ExecStart=/docker/minecraft-bedrock-server-setup/bin/rsync-googledrive.sh
+ExecStart=/docker/minecraft-bedrock-server-setup/bin/aws-s3-copy.sh
 
 [Install]
 WantedBy=timers.target

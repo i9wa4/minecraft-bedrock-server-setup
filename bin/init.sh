@@ -12,8 +12,3 @@ sudo ufw enable
 sudo ufw allow "${PORT_SERVER}"
 sudo ufw allow "${PORT_SSH}"
 sudo ufw reload
-
-# https://codechacha.com/ja/ubuntu-how-to-mount-google-drive/
-sudo add-apt-repository -y ppa:alessandro-strada/ppa
-sudo apt update
-sudo apt install -y google-drive-ocamlfuse
