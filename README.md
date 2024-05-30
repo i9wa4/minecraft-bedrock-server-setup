@@ -33,7 +33,7 @@ This Minecraft server automatically creates backups of the world to Google Drive
     docker compose stop
     ```
 
-1. Overwrite the followings if needed. You may need `sudo chown root:root`.
+1. Overwrite the followings if needed.
     - `/docker/mbs/allowlist.json`
     - `/docker/mbs/permissions.json`
     - `/docker/mbs/server.properties`
