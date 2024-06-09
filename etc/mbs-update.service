@@ -2,7 +2,7 @@
 Description=Minecraft Bedrock Server Update
 
 [Service]
-Envirnment=THIS_USERNAME=i9wa4
+Environment=THIS_USERNAME=i9wa4
 Type=oneshot
 ExecStart=bash /home/${THIS_USERNAME}/Minecraft/minecraft-bedrock-server-setup/bin/update.sh
 
