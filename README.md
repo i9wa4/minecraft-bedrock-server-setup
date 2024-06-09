@@ -21,9 +21,9 @@ This Minecraft server automatically creates backups of the world to Google Drive
     PORT_SERVER=
     PORT_SSH=
     WORLD_NAME=
-    DIR_REPO=
-    DIR_BACKUP=
-    DIR_SERVER=
+    DIR_REPO=~/mbs/minecraft-bedrock-server-setup
+    DIR_BACKUP=~/mbs/backup
+    DIR_SERVER=~/mbs/server
     S3_BACKUP_URI=
     ```
 
@@ -44,11 +44,11 @@ This Minecraft server automatically creates backups of the world to Google Drive
     1. Overwrite the followings.
 
         ```plaintext
-        ~/Minecraft/mbs/allowlist.json
-        ~/Minecraft/mbs/permissions.json
-        ~/Minecraft/mbs/server.properties
-        ~/Minecraft/mbs/valid_known_packs.json
-        ~/Minecraft/mbs/worlds/
+        ~/mbs/server/allowlist.json
+        ~/mbs/server/permissions.json
+        ~/mbs/server/server.properties
+        ~/mbs/server/valid_known_packs.json
+        ~/mbs/server/worlds/
         ```
 
     1. Start the server.
