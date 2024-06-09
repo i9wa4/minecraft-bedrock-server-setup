@@ -4,7 +4,7 @@ export LC_ALL=C
 
 cd "$(dirname "$0")"
 
-source ../.env
+. ../.env
 
 mkdir -p "${DIR_SERVER}"
 mkdir -p "${DIR_BACKUP}"

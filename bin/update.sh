@@ -4,7 +4,7 @@ export LC_ALL=C
 
 cd "$(dirname "$0")"
 
-source ../.env
+. ../.env
 
 echo "update the server"
 cd "${DIR_REPO}"

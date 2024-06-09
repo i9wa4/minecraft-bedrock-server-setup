@@ -4,6 +4,7 @@ export LC_ALL=C
 
 cd "$(dirname "$0")"
 
-source ../.env
+. ../.env
+. "${HOME}"/.zshenv
 
 aws s3 sync "${DIR_BACKUP}" "${S3_BACKUP_URI}"

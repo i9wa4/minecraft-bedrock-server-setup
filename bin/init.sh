@@ -4,7 +4,7 @@ export LC_ALL=C
 
 cd "$(dirname "$0")"
 
-source ../.env
+. ../.env
 
 # https://qiita.com/siida36/items/be21d361cf80d664859c
 sudo ufw default DENY

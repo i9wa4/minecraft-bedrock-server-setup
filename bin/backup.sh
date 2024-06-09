@@ -4,7 +4,7 @@ export LC_ALL=C
 
 cd "$(dirname "$0")"
 
-source ../.env
+. ../.env
 
 TIMESTAMP=$(date '+%Y%m%dT%H%M%S')
 echo TIMESTAMP="${TIMESTAMP}"
