@@ -25,7 +25,7 @@ This Minecraft server automatically creates backups of the world to Google Drive
     DIR_REPO=
     DIR_BACKUP=
     DIR_SERVER=
-    S3_BUCKET=
+    S3_BACKUP_URI=
     ```
 
 1. Initialize the server.
@@ -62,7 +62,7 @@ This Minecraft server automatically creates backups of the world to Google Drive
 ## 3. Update the server manually
 
 ```sh
-bash bin/update.sh
+systemctl --user start mbs-update.service
 ```
 
 ## 4. View logs
@@ -71,5 +71,5 @@ bash bin/update.sh
 docker compose logs
 
 # attach: docker compose up
-# detach: CTRL-4
+# detach: CTRL-Z
 ```
