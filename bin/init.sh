@@ -12,7 +12,3 @@ sudo ufw enable
 sudo ufw allow "${PORT_SERVER}"
 sudo ufw allow "${PORT_SSH}"
 sudo ufw reload
-
-mkdir -p "${DIR_SERVER}"
-mkdir -p "${DIR_BACKUP}"
-# chmod 755 -R "${DIR_REPO}"/bin

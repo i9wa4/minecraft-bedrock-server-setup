@@ -32,16 +32,20 @@ This Minecraft server automatically creates backups of the world to Google Drive
 
     ```sh
     sudo bash bin/init.sh
+    bash bin/init-user.sh
     docker compose up -d --wait
     docker compose stop
     ```
 
 1. Overwrite the followings if needed.
-    - `~/Minecraft/mbs/allowlist.json`
-    - `~/Minecraft/mbs/permissions.json`
-    - `~/Minecraft/mbs/server.properties`
-    - `~/Minecraft/mbs/valid_known_packs.json`
-    - `~/Minecraft/mbs/worlds/`
+
+    ```plaintext
+    ~/Minecraft/mbs/allowlist.json
+    ~/Minecraft/mbs/permissions.json
+    ~/Minecraft/mbs/server.properties
+    ~/Minecraft/mbs/valid_known_packs.json
+    ~/Minecraft/mbs/worlds/
+    ```
 
 1. Start the server.
 
@@ -49,25 +53,17 @@ This Minecraft server automatically creates backups of the world to Google Drive
     docker compose up -d --wait
     ```
 
-1. Configure systemd.
-
-    ```sh
-    sudo bash bin/init-systemd.sh
-    ```
-
 ## 3. Update the server manually
 
 ```sh
-sudo bin/update.sh
+bash bin/update.sh
 ```
 
 ## 4. View logs
 
 ```sh
 docker compose logs
-```
 
-```sh
-docker compose up
+# attach: docker compose up
 # detach: CTRL-4
 ```
