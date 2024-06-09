@@ -8,7 +8,6 @@ cd "$(dirname "$0")"
 
 mkdir -p "${DIR_SERVER}"
 mkdir -p "${DIR_BACKUP}"
-# chmod 755 -R "${DIR_REPO}"/bin
 
 # https://zenn.dev/hi_ka_ru/articles/d01bf1a91bade0
 # https://takuya-1st.hatenablog.jp/entry/2019/08/09/004829
@@ -20,7 +19,7 @@ ln -fs "${DIR_REPO}"/etc/mbs-backup-cloud.timer    "${HOME}"/.config/systemd/use
 ln -fs "${DIR_REPO}"/etc/mbs-update.service        "${HOME}"/.config/systemd/user/mbs-update.service
 ln -fs "${DIR_REPO}"/etc/mbs-update.timer          "${HOME}"/.config/systemd/user/mbs-update.timer
 
-systemctl daemon-reload
+systemctl --user daemon-reload
 systemctl --user enable mbs-backup.timer
 systemctl --user start  mbs-backup.timer
 systemctl --user enable mbs-backup-cloud.timer

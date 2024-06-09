@@ -3,7 +3,7 @@ Description=Minecraft Bedrock Server Backup
 
 [Service]
 Type=oneshot
-ExecStart=bash Minecraft/minecraft-bedrock-server-setup/bin/backup.sh
+ExecStart=bash mbs/minecraft-bedrock-server-setup/bin/backup.sh
 
 [Install]
 WantedBy=timers.target

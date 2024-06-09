@@ -10,10 +10,9 @@ This Minecraft server automatically creates backups of the world to Google Drive
 
 1. Clone this repository.
     ```sh
-    git clone https://github.com/i9wa4/minecraft-bedrock-server-setup ~/Minecraft/minecraft-bedrock-server-setup
+    git clone https://github.com/i9wa4/minecraft-bedrock-server-setup ~/mbs/minecraft-bedrock-server-setup
     ```
-1. Fix `${THIS_USERNAME}` in `./etc/*.service`.
-1. Create `.env` in the root of this repository.
+1. Create `.env` in the root of this repository and set values.
 
     ```sh
     MY_UID=1000
@@ -31,8 +30,7 @@ This Minecraft server automatically creates backups of the world to Google Drive
 1. Initialize the server.
 
     ```sh
-    sudo bash bin/init.sh
-    bash bin/init-user.sh
+    bash bin/init.sh
     docker compose up -d --wait
     ```
 
