@@ -6,4 +6,4 @@ cd "$(dirname "$0")"
 
 source ../.env
 
-aws s3 sync "${DIR_BACKUP}" "${S3_BUCKUP_URI}"
+aws s3 sync "${DIR_BACKUP}" "${S3_BACKUP_URI}"
