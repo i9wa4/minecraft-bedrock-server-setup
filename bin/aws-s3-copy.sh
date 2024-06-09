@@ -6,4 +6,4 @@ cd "$(dirname "$0")"
 
 source ../.env
 
-chmod 755 -R "${DIR_REPO}"/bin
+aws s3 sync "${DIR_BACKUP}" "${S3_BUCKUP_URI}"

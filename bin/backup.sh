@@ -15,12 +15,13 @@ docker compose stop
 
 echo "back up the world"
 zip "${DIR_BACKUP}"/mbs-core-"${TIMESTAMP}".zip \
-  /docker/mbs/allowlist.json \
-  /docker/mbs/permissions.json \
-  /docker/mbs/server.properties \
-  /docker/mbs/valid_known_packs.json \
+  "${DIR_SERVER}"/allowlist.json \
+  "${DIR_SERVER}"/permissions.json \
+  "${DIR_SERVER}"/server.properties \
+  "${DIR_SERVER}"/valid_known_packs.json \
   "${DIR_REPO}"/.env
-zip -r "${DIR_BACKUP}"/mbs-"${WORLD_NAME}"-"${TIMESTAMP}".zip /docker/mbs/worlds/"${WORLD_NAME}"
+zip -r "${DIR_BACKUP}"/mbs-"${WORLD_NAME}"-"${TIMESTAMP}".zip \
+  "${DIR_SERVER}"/worlds/"${WORLD_NAME}"
 
 echo "start the server"
 cd "${DIR_REPO}"
