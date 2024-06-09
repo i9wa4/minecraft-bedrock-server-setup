@@ -13,7 +13,6 @@ This Minecraft server automatically creates backups of the world to Google Drive
     git clone https://github.com/i9wa4/minecraft-bedrock-server-setup ~/mbs/minecraft-bedrock-server-setup
     ```
 1. Create `.env` in the root of this repository and set values.
-
     ```sh
     MY_UID=1000
     MY_GID=1000
@@ -26,23 +25,17 @@ This Minecraft server automatically creates backups of the world to Google Drive
     DIR_SERVER=~/mbs/server
     S3_BACKUP_URI=
     ```
-
 1. Initialize the server.
-
     ```sh
     bash bin/init.sh
     docker compose up -d --wait
     ```
-
 1. If you already have a Minecraft world data, follow these steps.
     1. Stop the server.
-
         ```sh
         docker compose stop
         ```
-
     1. Overwrite the followings.
-
         ```plaintext
         ~/mbs/server/allowlist.json
         ~/mbs/server/permissions.json
@@ -50,9 +43,7 @@ This Minecraft server automatically creates backups of the world to Google Drive
         ~/mbs/server/valid_known_packs.json
         ~/mbs/server/worlds/
         ```
-
     1. Start the server.
-
         ```sh
         docker compose up -d --wait
         ```
