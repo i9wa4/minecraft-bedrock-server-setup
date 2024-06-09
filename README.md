@@ -18,7 +18,7 @@ This Minecraft server automatically creates backups of the world to Google Drive
     ```sh
     MY_UID=1000
     MY_GID=1000
-    MY_USERNAME=i9wa4
+    MY_USERNAME=
     PORT_SERVER=
     PORT_SSH=
     WORLD_NAME=
@@ -32,7 +32,7 @@ This Minecraft server automatically creates backups of the world to Google Drive
 
     ```sh
     sudo bash bin/init.sh
-    sudo bash bin/chmod.sh
+    bash bin/chmod.sh
     docker compose up -d --wait
     docker compose stop
     ```
