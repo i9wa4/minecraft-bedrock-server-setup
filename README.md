@@ -1,6 +1,6 @@
 # minecraft-bedrock-server-setup
 
-This Minecraft server automatically creates backups of the world to Google Drive and updates itself.
+This Minecraft server automatically updates itself and creates backups of the world to AWS S3.
 
 ## 1. Requirements
 
