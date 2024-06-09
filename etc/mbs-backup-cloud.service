@@ -2,9 +2,8 @@
 Description=Minecraft Bedrock Server Backup to Cloud
 
 [Service]
-Environment=THIS_USERNAME=i9wa4
 Type=oneshot
-ExecStart=bash /home/${THIS_USERNAME}/Minecraft/minecraft-bedrock-server-setup/bin/aws-s3-copy.sh
+ExecStart=bash Minecraft/minecraft-bedrock-server-setup/bin/aws-s3-copy.sh
 
 [Install]
 WantedBy=timers.target
