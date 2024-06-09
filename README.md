@@ -32,7 +32,6 @@ This Minecraft server automatically creates backups of the world to Google Drive
 
     ```sh
     sudo bash bin/init.sh
-    bash bin/chmod.sh
     docker compose up -d --wait
     docker compose stop
     ```
