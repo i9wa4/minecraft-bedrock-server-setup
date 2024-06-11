@@ -4,7 +4,11 @@ This Minecraft server automatically updates itself and creates backups of the wo
 
 ## 1. Requirements
 
-- AWS CLI
+- Linux machine
+    - Docker
+    - systemd
+    - AWS CLI
+- AWS S3 bucket
 
 ## 2. Set up the server
 
