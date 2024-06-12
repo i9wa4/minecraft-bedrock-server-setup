@@ -20,7 +20,6 @@ This Minecraft server automatically updates itself and creates backups of the wo
     ```sh
     MY_UID=1000
     MY_GID=1000
-    MY_USERNAME=
     PORT_SERVER=
     PORT_SSH=
     WORLD_NAME=
