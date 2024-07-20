@@ -29,4 +29,4 @@ docker compose up -d --wait
 
 echo "remove old backups"
 cd "${DIR_BACKUP}"
-ls -t | tail -n +9 | xargs -r rm
+ls -t | tail -n +29 | xargs -r rm
