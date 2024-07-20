@@ -2,7 +2,7 @@
 Description=Minecraft Bedrock Server Backup Timer
 
 [Timer]
-OnCalendar=Mon *-*-* 5:00
+OnCalendar=*-*-* 5:00
 
 [Install]
 WantedBy=timers.target
