@@ -2,6 +2,8 @@
 
 This Minecraft server automatically updates itself and creates backups of the world to AWS S3.
 
+cf. Docker image: <https://hub.docker.com/r/itzg/minecraft-bedrock-server>
+
 ## 1. Requirements
 
 - Linux machine
