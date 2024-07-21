@@ -22,13 +22,13 @@ This Minecraft server automatically updates itself and creates backups of the wo
     MY_GID=1000
     PORT_SERVER=
     PORT_SSH=
-    WORLD_NAME=
+    SERVER_NAME='minecraft-bedrock-server'
+    WORLD_NAME=''
     DIR_REPO=~/mbs/minecraft-bedrock-server-setup
     DIR_BACKUP=~/mbs/backup
     DIR_SERVER=~/mbs/server
-    SERVER_NAME=minecraft-bedrock-server
-    AWS_PROFILE=
-    S3_BACKUP_URI=
+    AWS_PROFILE=''
+    S3_BACKUP_URI=''
     ```
 1. Initialize the server.
     ```sh
