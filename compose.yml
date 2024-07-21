@@ -5,12 +5,12 @@ services:
     tty: true
     stdin_open: true
     restart: always
-    container_name: minecraft-bedrock-server
+    container_name: $SERVER_NAME
     ports:
       - $PORT_SERVER:$PORT_SERVER/udp
     environment:
       EULA: "TRUE"
-      SERVER_NAME: minecraft-bedrock-server
+      SERVER_NAME: $SERVER_NAME
       LEVEL_NAME: $WORLD_NAME
     volumes:
       - "$DIR_SERVER:/data"

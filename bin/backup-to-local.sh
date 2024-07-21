@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
-set -euox pipefail -o posix
-export LC_ALL=C
+set -o errexit
+set -o nounset
+set -o pipefail
+set -o posix
+export LC_ALL=C.UTF-8
 
 cd "$(dirname "$0")"
 

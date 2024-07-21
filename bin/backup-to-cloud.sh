@@ -9,7 +9,4 @@ cd "$(dirname "$0")"
 
 . ../.env
 
-echo "update the server"
-cd "${DIR_REPO}"
-docker compose down
-docker compose up -d --wait
+aws s3 sync "${DIR_BACKUP}" "${S3_BACKUP_URI}" --profile="${AWS_PROFILE}"

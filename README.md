@@ -26,6 +26,8 @@ This Minecraft server automatically updates itself and creates backups of the wo
     DIR_REPO=~/mbs/minecraft-bedrock-server-setup
     DIR_BACKUP=~/mbs/backup
     DIR_SERVER=~/mbs/server
+    SERVER_NAME=minecraft-bedrock-server
+    AWS_PROFILE=
     S3_BACKUP_URI=
     ```
 1. Initialize the server.

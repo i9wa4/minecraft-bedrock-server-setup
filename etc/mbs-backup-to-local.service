@@ -1,0 +1,6 @@
+[Unit]
+Description=Minecraft Bedrock Server Backup to Local
+
+[Service]
+Type=oneshot
+ExecStart=bash mbs/minecraft-bedrock-server-setup/bin/backup-to-local.sh

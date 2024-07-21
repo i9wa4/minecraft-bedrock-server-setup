@@ -3,4 +3,4 @@ Description=Minecraft Bedrock Server Backup to Cloud
 
 [Service]
 Type=oneshot
-ExecStart=bash mbs/minecraft-bedrock-server-setup/bin/aws-s3-copy.sh
+ExecStart=bash mbs/minecraft-bedrock-server-setup/bin/backup-to-cloud.sh

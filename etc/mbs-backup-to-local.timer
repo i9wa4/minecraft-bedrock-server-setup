@@ -1,5 +1,5 @@
 [Unit]
-Description=Minecraft Bedrock Server Backup Timer
+Description=Minecraft Bedrock Server Backup to Local Timer
 
 [Timer]
 OnCalendar=*-*-* 5:00
