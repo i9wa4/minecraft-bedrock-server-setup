@@ -4,6 +4,3 @@ Description=Minecraft Bedrock Server Update
 [Service]
 Type=oneshot
 ExecStart=bash mbs/minecraft-bedrock-server-setup/bin/update.sh
-
-[Install]
-WantedBy=timers.target
