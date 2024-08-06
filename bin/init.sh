@@ -35,3 +35,6 @@ systemctl --user enable mbs-backup-to-cloud.timer
 systemctl --user start  mbs-backup-to-cloud.timer
 systemctl --user enable mbs-update.timer
 systemctl --user start  mbs-update.timer
+
+# https://qiita.com/k0kubun/items/3c94473506e0e370a227
+sudo loginctl enable-linger "${USER_NAME}"
