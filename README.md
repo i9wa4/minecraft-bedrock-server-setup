@@ -24,14 +24,14 @@ cf. Docker image: <https://hub.docker.com/r/itzg/minecraft-bedrock-server>
     MY_GID=1000
     PORT_SERVER=
     PORT_SSH=
-    SERVER_NAME='minecraft-bedrock-server'
-    WORLD_NAME=''
+    SERVER_NAME=minecraft-bedrock-server
+    WORLD_NAME=
     DIR_REPO=~/mbs/minecraft-bedrock-server-setup
     DIR_BACKUP=~/mbs/backup
     DIR_SERVER=~/mbs/server
     USER_NAME=i9wa4
-    AWS_PROFILE=''
-    S3_BACKUP_URI=''
+    AWS_PROFILE=
+    S3_BACKUP_URI=
     ```
 1. Initialize the server.
     ```sh
