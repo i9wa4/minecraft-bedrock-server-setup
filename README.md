@@ -22,6 +22,7 @@ cf. Docker image: <https://hub.docker.com/r/itzg/minecraft-bedrock-server>
     ```sh
     MY_UID=1000
     MY_GID=1000
+    MY_USER_NAME=i9wa4
     PORT_SERVER=
     PORT_SSH=
     SERVER_NAME=minecraft-bedrock-server
@@ -29,7 +30,6 @@ cf. Docker image: <https://hub.docker.com/r/itzg/minecraft-bedrock-server>
     DIR_REPO=~/mbs/minecraft-bedrock-server-setup
     DIR_BACKUP=~/mbs/backup
     DIR_SERVER=~/mbs/server
-    USER_NAME=i9wa4
     AWS_PROFILE=
     S3_BACKUP_URI=
     ```
