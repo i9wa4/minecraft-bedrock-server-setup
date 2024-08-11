@@ -22,7 +22,6 @@ This Minecraft server automatically updates itself and creates backups of the wo
 ## 3. Configuration
 
 - Set `OnCalendar` values in the followings if needed.
-    - `etc/mbs-backup-to-cloud.timer`
     - `etc/mbs-backup-to-local.timer`
     - `etc/mbs-update.timer`
 
