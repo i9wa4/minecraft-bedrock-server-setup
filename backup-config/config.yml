@@ -7,7 +7,7 @@ containers:
       # itzg writes out the password as yaml to the root of /data
       passwordFile: /public/.remote-console.yaml
       worlds:
-        - /public/worlds/$WORLD_NAME
+        - /public/worlds/25nishi
 schedule:
   # Configures the schedule for backups
   onPlayerLogin: true
