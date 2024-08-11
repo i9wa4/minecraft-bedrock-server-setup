@@ -1,6 +1,7 @@
 [Unit]
 Description=Minecraft Bedrock Server Backup to Cloud
 After=mbs-backup-to-local.service
+Wants=mbs-backup-to-local.service
 
 [Service]
 Type=oneshot
