@@ -25,7 +25,7 @@ cf. Docker image: <https://hub.docker.com/r/itzg/minecraft-bedrock-server>
     MY_USER_NAME=i9wa4
     PORT_SERVER=
     PORT_SSH=
-    SERVER_NAME=minecraft-bedrock-server
+    SERVER_NAME=mbs
     WORLD_NAME=
     DIR_REPO=~/mbs/minecraft-bedrock-server-setup
     DIR_BACKUP=~/mbs/backup
