@@ -1,5 +1,5 @@
 services:
-  mbs:
+  public:
     image: itzg/minecraft-bedrock-server:latest
     user: $MY_UID:$MY_GID
     tty: true
@@ -8,9 +8,36 @@ services:
     container_name: $SERVER_NAME
     ports:
       - $PORT_SERVER:$PORT_SERVER/udp
+    expose:
+      - 2222
     environment:
+      ENABLE_SSH: "TRUE"
       EULA: "TRUE"
+      VERSION: "LATEST"
+      UID: $MY_UID
+      GID: $MY_GID
+      TZ: "Asia/Tokyo"
       SERVER_NAME: $SERVER_NAME
       LEVEL_NAME: $WORLD_NAME
     volumes:
       - "$DIR_SERVER:/data"
+
+  backup:
+    image: kaiede/minecraft-bedrock-backup
+    restart: always
+    depends_on:
+      # Make sure the minecraft service starts before the backup
+      - "public"
+    environment:
+      # Without this, your log timestamps will be in the GMT timezone.
+      TZ: "Asia/Tokyo"
+    volumes:
+      # (Optional) Map a configuration folder separately from the backups.
+      # - /minecraft/backup-config:/config
+      - "$DIR_REPO/backup-config:/config"
+      # Map your backups folder into /data
+      # - /minecraft/backups:/data
+      - "$DIR_BACKUP:/data"
+      # Map your server's data folder wherever you like
+      # - /minecraft/public:/public
+      - "$DIR_SERVER:/public"

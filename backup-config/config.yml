@@ -1,0 +1,18 @@
+containers:
+  # Configures the containers to be backed up
+  bedrock:
+    - name: bedrock_public
+      # The hostname here is the name of the service in the compose YML.
+      ssh: public:2222
+      # itzg writes out the password as yaml to the root of /data
+      passwordFile: /public/.remote-console.yaml
+      worlds:
+        - /public/worlds/PublicSMP
+schedule:
+  # Configures the schedule for backups
+  interval: 1h
+trim:
+  # Configures how backups are 'trimmed' to save disk space
+  trimDays: 2
+  keepDays: 14
+  minKeep: 2
