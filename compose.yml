@@ -42,7 +42,7 @@ services:
       - "${DIR_REPO}/backup-config:/config"
       # Map your backups folder into /data
       # - /minecraft/backups:/data
-      - "${DIR_BACKUP}:/data"
+      - "${DIR_BACKUP_WORLDS}:/data"
       # Map your server's data folder wherever you like
       # - /minecraft/public:/public
       - "${DIR_SERVER}:/public"

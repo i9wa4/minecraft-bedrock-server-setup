@@ -9,4 +9,5 @@ cd "$(dirname "$0")"
 
 . ../.env
 
-aws s3 sync "${DIR_BACKUP}" "${S3_BACKUP_URI}" --profile="${AWS_PROFILE}"
+aws s3 sync "${DIR_BACKUP_WORLDS}" "${S3_BACKUP_WORLDS_URI}" --profile="${AWS_PROFILE}"
+aws s3 sync "${DIR_BACKUP_WORLDS}" "${S3_BACKUP_CORE_URI}" --profile="${AWS_PROFILE}"

@@ -17,7 +17,8 @@ sudo ufw allow "${PORT_SSH}"
 sudo ufw reload
 
 mkdir -p "${DIR_SERVER}"
-mkdir -p "${DIR_BACKUP}"
+mkdir -p "${DIR_BACKUP_CORE}"
+mkdir -p "${DIR_BACKUP_WORLDS}"
 
 # https://zenn.dev/hi_ka_ru/articles/d01bf1a91bade0
 # https://takuya-1st.hatenablog.jp/entry/2019/08/09/004829

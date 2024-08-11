@@ -15,6 +15,6 @@ schedule:
   onPlayerLogout: true
 trim:
   # Configures how backups are 'trimmed' to save disk space
-  trimDays: 4
   keepDays: 14
+  trimDays: 2
   minKeep: 2
