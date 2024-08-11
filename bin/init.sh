@@ -24,13 +24,13 @@ mkdir -p "${DIR_BACKUP_WORLDS}"
 # https://takuya-1st.hatenablog.jp/entry/2019/08/09/004829
 mkdir -p "${HOME}"/.config/systemd/user/
 ln -fs "${DIR_REPO}"/etc/mbs-backup-to-local.service  "${HOME}"/.config/systemd/user/mbs-backup-to-local.service
-ln -fs "${DIR_REPO}"/etc/mbs-backup-to-local.timer    "${HOME}"/.config/systemd/user/mbs-backup-to-local.timer
 ln -fs "${DIR_REPO}"/etc/mbs-backup-to-cloud.service  "${HOME}"/.config/systemd/user/mbs-backup-to-cloud.service
+ln -fs "${DIR_REPO}"/etc/mbs-backup-to-cloud.timer    "${HOME}"/.config/systemd/user/mbs-backup-to-cloud.timer
 ln -fs "${DIR_REPO}"/etc/mbs-update.service           "${HOME}"/.config/systemd/user/mbs-update.service
 ln -fs "${DIR_REPO}"/etc/mbs-update.timer             "${HOME}"/.config/systemd/user/mbs-update.timer
 systemctl --user daemon-reload
-systemctl --user enable mbs-backup-to-local.timer
-systemctl --user start  mbs-backup-to-local.timer
+systemctl --user enable mbs-backup-to-cloud.timer
+systemctl --user start  mbs-backup-to-cloud.timer
 systemctl --user enable mbs-update.timer
 systemctl --user start  mbs-update.timer
 

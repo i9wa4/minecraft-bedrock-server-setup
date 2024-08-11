@@ -1,8 +1,0 @@
-[Unit]
-Description=Minecraft Bedrock Server Backup to Local Timer
-
-[Timer]
-OnCalendar=Fri *-*-* 5:00:00
-
-[Install]
-WantedBy=timers.target
