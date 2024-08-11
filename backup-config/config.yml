@@ -3,7 +3,7 @@ containers:
   bedrock:
     - name: bedrock_public
       # The hostname here is the name of the service in the compose YML.
-      ssh: public:59730
+      ssh: public:2222
       # itzg writes out the password as yaml to the root of /data
       passwordFile: /public/.remote-console.yaml
       worlds:
