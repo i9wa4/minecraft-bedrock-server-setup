@@ -1,18 +1,32 @@
 # minecraft-bedrock-server-setup
 
-This Minecraft server automatically updates itself and creates backups of the world to AWS S3.
+This Minecraft server automatically updates itself and creates backups of the world and config to AWS S3.
 
-cf. Docker image: <https://hub.docker.com/r/itzg/minecraft-bedrock-server>
+## 1. Dependencies
 
-## 1. Requirements
+- Minecraft bedrock server image
+    - <https://hub.docker.com/r/itzg/minecraft-bedrock-server>
+    - <https://github.com/itzg/docker-minecraft-bedrock-server>
+- Minecraft bedrock world backup system image
+    - <https://hub.docker.com/r/kaiede/minecraft-bedrock-backup>
+    - <https://github.com/Kaiede/Bedrockifier>
+
+## 2. Requirements
 
 - Linux machine
     - Docker
     - systemd
     - AWS CLI
-- AWS S3 bucket
+- AWS S3
 
-## 2. Set up the server
+## 3. Configuration
+
+- Set `OnCalendar` values in the followings if needed.
+    - `etc/mbs-backup-to-cloud.timer`
+    - `etc/mbs-backup-to-local.timer`
+    - `etc/mbs-update.timer`
+
+## 4. Set up the server
 
 1. Clone this repository.
     ```sh
@@ -60,17 +74,8 @@ cf. Docker image: <https://hub.docker.com/r/itzg/minecraft-bedrock-server>
         docker compose up -d --wait
         ```
 
-## 3. Update the server manually
+## 5. Update the server manually
 
 ```sh
 systemctl --user start mbs-update.service
-```
-
-## 4. View logs
-
-```sh
-docker compose logs
-
-# attach: docker compose up
-# detach: CTRL-Z
 ```
