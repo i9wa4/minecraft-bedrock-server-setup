@@ -1,11 +1,13 @@
 services:
   public:
     image: itzg/minecraft-bedrock-server:latest
+    container_name: ${SERVER_NAME}
     user: ${MY_UID}:${MY_GID}
+    restart: always
+    env_file:
+      - .env
     tty: true
     stdin_open: true
-    restart: always
-    container_name: ${SERVER_NAME}
     ports:
       - ${PORT_SERVER}:${PORT_SERVER}/udp
     expose:
@@ -16,7 +18,7 @@ services:
       VERSION: "LATEST"
       UID: ${MY_UID}
       GID: ${MY_GID}
-      TZ: "Asia/Tokyo"
+      TZ: ${MY_TZ}
       SERVER_NAME: ${SERVER_NAME}
       LEVEL_NAME: ${WORLD_NAME}
     volumes:
@@ -25,13 +27,16 @@ services:
   backup:
     image: kaiede/minecraft-bedrock-backup
     container_name: ${SERVER_NAME}-backup
+    user: ${MY_UID}:${MY_GID}
     restart: always
+    env_file:
+      - .env
     depends_on:
       # Make sure the minecraft service starts before the backup
       - "public"
     environment:
       # Without this, your log timestamps will be in the GMT timezone.
-      TZ: "Asia/Tokyo"
+      TZ: ${MY_TZ}
     volumes:
       # (Optional) Map a configuration folder separately from the backups.
       # - /minecraft/backup-config:/config

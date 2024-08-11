@@ -23,8 +23,10 @@ cf. Docker image: <https://hub.docker.com/r/itzg/minecraft-bedrock-server>
     MY_UID=1000
     MY_GID=1000
     MY_USER_NAME=i9wa4
+    MY_TZ=
     PORT_SERVER=
     PORT_SSH=
+    PORT_EXPOSE=
     SERVER_NAME=mbs
     WORLD_NAME=
     DIR_ROOT=~/mbs
