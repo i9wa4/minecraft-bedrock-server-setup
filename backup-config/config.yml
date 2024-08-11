@@ -10,6 +10,7 @@ containers:
         - /public/worlds/25nishi
 schedule:
   # Configures the schedule for backups
+  startupDelay: 1m
   onPlayerLogin: true
   onPlayerLogout: true
   minInterval: 3h

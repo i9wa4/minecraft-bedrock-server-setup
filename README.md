@@ -28,9 +28,9 @@ cf. Docker image: <https://hub.docker.com/r/itzg/minecraft-bedrock-server>
     SERVER_NAME=mbs
     WORLD_NAME=
     DIR_ROOT=~/mbs
-    DIR_REPO=$DIR_ROOT/minecraft-bedrock-server-setup
-    DIR_BACKUP=$DIR_ROOT/backup
-    DIR_SERVER=$DIR_ROOT/server
+    DIR_REPO=${DIR_ROOT}/minecraft-bedrock-server-setup
+    DIR_BACKUP=${DIR_ROOT}/backup
+    DIR_SERVER=${DIR_ROOT}/server
     AWS_PROFILE=
     S3_BACKUP_URI=
     ```
