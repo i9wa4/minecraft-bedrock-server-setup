@@ -11,7 +11,7 @@ services:
     ports:
       - ${PORT_SERVER}:${PORT_SERVER}/udp
     expose:
-      - 2222
+      - 59730
     environment:
       ENABLE_SSH: "TRUE"
       EULA: "TRUE"
@@ -27,7 +27,6 @@ services:
   backup:
     image: kaiede/minecraft-bedrock-backup
     container_name: ${SERVER_NAME}-backup
-    user: ${MY_UID}:${MY_GID}
     restart: always
     env_file:
       - .env
