@@ -10,7 +10,9 @@ containers:
         - /public/worlds/PublicSMP
 schedule:
   # Configures the schedule for backups
-  interval: 1h
+  onPlayerLogin: true
+  onPlayerLogout: true
+  minInterval: 3h
 trim:
   # Configures how backups are 'trimmed' to save disk space
   trimDays: 2
