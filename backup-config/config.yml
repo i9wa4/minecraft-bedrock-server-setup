@@ -10,7 +10,7 @@ containers:
         - /public/worlds
 schedule:
   # Configures the schedule for backups
-  daily: 4:00
+  interval: 3h
   startupDelay: 1m
   onPlayerLogin: true
   onPlayerLogout: true
