@@ -12,8 +12,8 @@ schedule:
   # Configures the schedule for backups
   interval: 3h
   startupDelay: 1m
-  onPlayerLogin: true
-  onPlayerLogout: true
+  onLastLogout: true
+  minInterval: 3h
 trim:
   # Configures how backups are 'trimmed' to save disk space
   keepDays: 14
