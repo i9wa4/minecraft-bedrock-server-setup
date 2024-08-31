@@ -10,7 +10,7 @@ containers:
         - /public/worlds
 schedule:
   # Configures the schedule for backups
-  interval: 3h
+  interval: 6h
   startupDelay: 1m
   onLastLogout: true
   minInterval: 3h
