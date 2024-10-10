@@ -12,4 +12,5 @@ cd "$(dirname "$0")"
 echo "update the server"
 cd "${DIR_REPO}"
 docker compose down
+docker compose pull
 docker compose up -d --wait
