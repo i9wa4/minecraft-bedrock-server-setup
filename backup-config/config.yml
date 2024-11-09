@@ -10,10 +10,10 @@ containers:
         - /public/worlds
 schedule:
   # Configures the schedule for backups
-  interval: 6h
+  interval: 12h
   startupDelay: 1m
   onLastLogout: true
-  minInterval: 3h
+  minInterval: 6h
 trim:
   # Configures how backups are 'trimmed' to save disk space
   keepDays: 14
