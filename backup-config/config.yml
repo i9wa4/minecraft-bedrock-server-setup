@@ -16,6 +16,6 @@ schedule:
   minInterval: 6h
 trim:
   # Configures how backups are 'trimmed' to save disk space
-  keepDays: 14
-  trimDays: 2
+  keepDays: 30
+  trimDays: 1
   minKeep: 2
