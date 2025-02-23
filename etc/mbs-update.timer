@@ -2,7 +2,7 @@
 Description=Minecraft Bedrock Server Update Timer
 
 [Timer]
-OnCalendar=Mon,Tue,Wed,Thu,Fri *-*-* 12:00:00
+OnCalendar=Fri *-*-* 12:00:00
 
 [Install]
 WantedBy=timers.target
