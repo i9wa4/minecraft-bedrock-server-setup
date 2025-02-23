@@ -9,20 +9,20 @@ cd "$(dirname "$0")"
 
 . ../.env
 
-TIMESTAMP=$(date '+%Y%m%dT%H%M%S')
+TIMESTAMP=$(date '+%Y%m%d-%H%M%S')
 echo TIMESTAMP="${TIMESTAMP}"
 
 echo "back up core data"
-zip "${DIR_BACKUP_CORE}"/mbs-core-"${TIMESTAMP}".zip \
-  "${DIR_SERVER}"/allowlist.json \
-  "${DIR_SERVER}"/permissions.json \
-  "${DIR_SERVER}"/server.properties \
-  "${DIR_SERVER}"/valid_known_packs.json \
-  "${DIR_REPO}"/.env
+zip "${DIR_BACKUP_CORE}"/core."${TIMESTAMP}".zip \
+	"${DIR_SERVER}"/allowlist.json \
+	"${DIR_SERVER}"/permissions.json \
+	"${DIR_SERVER}"/server.properties \
+	"${DIR_SERVER}"/valid_known_packs.json \
+	"${DIR_REPO}"/.env
 
 echo "remove old core backups"
 cd "${DIR_BACKUP_CORE}"
-ls -t | tail -n +29 | xargs -r rm
+ls -t | tail -n +9 | xargs -r rm
 
 # NOTE: use kaiede/minecraft-bedrock-backup instead
 # echo "back up worlds"
